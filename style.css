@@ -1,1 +1,43 @@
+.filter-table-outer{
+    margin: 80px 100px;
+    box-shadow: 2px 2px 15px 0px rgb(0 0 0 / 20%);
+    -webkit-box-shadow: 2px 2px 15px 0px rgb(0 0 0 / 20%);
+    -moz-box-shadow: 2px 2px 15px 0px rgb(0, 0, 0, 0.2);
+}
 
+.filter-table-outer .card-body {
+    padding: 0;
+}
+
+.filter-table-outer h5.card-header {
+    background: #428bca;
+    color: #fff;
+}
+
+table#filterTable {
+    width: 100%;
+}
+
+
+#filterTable tr th{    
+    background: #f3f3f3;
+}
+
+.filter-element{
+    width: 300px;
+}
+
+
+.filter-element + .filter-element{
+   margin-left: 20px;
+}
+
+
+#filterTable tr th, #filterTable tr td {
+    padding: 10px 20px;
+}
+
+.filters {
+    display: flex;
+    padding: 10px 20px;
+}

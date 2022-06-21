@@ -4,10 +4,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <title>Filter Table</title>
 </head>
 <body>
+  <div class="filter-table-outer">
+  <div class="card">
+    <h5 class="card-header">Employees</h5>
+    <div class="card-body">
+      <div class="filters">
+        <div class="filter-element">User Id
+          <select id="user_id__filter"  class="form-control">
+           
+          </select>
+        </div>
+        <div class="filter-element">Job Title
+          <select id="job_title__filter" class="form-control">
+           
+          </select>
+        </div>
+        <div class="filter-element">First Name
+          <select id="first_name__filter" class="form-control">
+            
+          </select>
+        </div>
+      </div>
+      <table id="filterTable">
+        <tr>
+            <th>User Id</th>
+            <th>Job Title</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Employee Code</th>
+            <th>Region</th>
+            <th>PhoneNumber</th>
+            <th>Email Address</th>
+    
+        </tr>
+        </table>
+    </div>
+  </div>
+  </div>
+  
 
 <script src="script.js"></script>
 </body>
