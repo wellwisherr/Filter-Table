@@ -1,4 +1,3 @@
-
 var tableId = document.getElementById('filterTable');
 var userId = document.getElementById('user_id__filter');
 var jobTitleName = document.getElementById('job_title__filter');
@@ -7,6 +6,7 @@ var userIdArray = [];
 var jobTitleArray = [];
 var firstNameArray = [];
 var data = [];
+var selectTag =  document.getElementsByClassName('filter-select');
 
 var filterFunctions ={
 
@@ -79,22 +79,26 @@ createOption :  function (selectArray, selectId){
 },
 
 handleFilter : function (){
-  userId.addEventListener('change',()=> filterFunctions.filterData(event));
-  jobTitleName.addEventListener('change', () => filterFunctions.filterData(event));
-  firstName.addEventListener('change', () => filterFunctions.filterData(event));
+ 
+ 
+  for(let i = 0; i < selectTag.length; i++) {
+     selectTag[i].addEventListener('change',()=> filterFunctions.filterData());
+  } 
 },
 
 
-filterData : function(event) {
-  debugger;
-  let filterValue = event.target.value;
-  if(!filterValue) {
-    filterFunctions.popuplateTable(data);
-  }
-  const filters = {
-    jobTitleName: filterValue,
-  };
-
+filterData : function() {
+  // debugger;
+  var filters = {};
+  for(let i = 0; i < selectTag.length; i++) {
+   var value = selectTag[i].options[ selectTag[i].selectedIndex].value;
+   if(value != ""){
+      var selectAttribute = selectTag[i].getAttribute('data-key');
+      filters[selectAttribute] = value;
+      
+   }
+ } 
+ console.log(filters);
   const result = data.filter((o) =>
   Object.keys(filters).every((k) => filters[k] === o[k])
 );

@@ -41,3 +41,7 @@ table#filterTable {
     display: flex;
     padding: 10px 20px;
 }
+
+.filter-table-outer .card{
+    border: 1px solid rgb(66 139 202);
+}
